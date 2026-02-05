@@ -25,7 +25,7 @@ app = FastAPI(
 # -------------------------
 # CONFIGURATION
 # -------------------------
-MAX_MESSAGES = 15
+MAX_MESSAGES = 20
 MIN_INTEL_REQUIRED = 3
 
 # -------------------------
@@ -96,7 +96,7 @@ SUSPICIOUS_TERMS = {
 INTEL_PATTERNS = {
     "upiIds": r"[a-zA-Z0-9\.\-_]{2,256}@[a-zA-Z]{2,64}",
     "bankAccounts": r"\b\d{11,16}\b",
-    "phoneNumbers": r"(?:\+91[\-\s]?)?[6-9]\d{9}\b",
+    "phoneNumbers": r"\b(?:\+91[\-\s]?)?[6-9]\d{9}\b",
     "phishingLinks": r"https?://(?:[-\w.]|(?:%[\da-fA-F]{2}))+"
 }
 
@@ -118,7 +118,6 @@ IMPERATIVE_PATTERNS = [
     r"\bclick\b\s+(the|on)",
     r"\b(immediately|right now|within \d+)\b"
 ]
-
 
 def sanitize_reply(reply: str) -> str:
     """
