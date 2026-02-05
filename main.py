@@ -26,7 +26,7 @@ app = FastAPI(
 # CONFIGURATION
 # -------------------------
 MAX_MESSAGES = 15
-MIN_INTEL_REQUIRED = 1
+MIN_INTEL_REQUIRED = 3
 
 # -------------------------
 # DATABASE MANAGER (Persistence)
