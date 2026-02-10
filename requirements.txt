@@ -5,4 +5,4 @@ python-dotenv
 pydantic
 joblib
 numpy
-sklearn
+scikit-learn
